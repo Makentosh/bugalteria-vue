@@ -4,11 +4,60 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
+    meta: {layout: 'main'},
     component: Home
+  },
+  {
+    path: '/login',
+    name: 'login',
+    meta: {layout: 'empty'},
+    component: () => import('../views/Login')
+  },
+  {
+    path: '/register',
+    name: 'register',
+    meta: {layout: 'empty'},
+    component: () => import('../views/Register')
+  },
+  {
+    path: '/categories',
+    name: 'categories',
+    meta: {layout: 'main'},
+    component: () => import('../views/Categories')
+  },
+  {
+    path: '/record',
+    name: 'record',
+    meta: {layout: 'main'},
+    component: () => import('../views/Record')
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    meta: {layout: 'main'},
+    component: () => import('../views/Profile')
+  },
+  {
+    path: '/planing',
+    name: 'planing',
+    meta: {layout: 'main'},
+    component: () => import('../views/Planing')
+  },
+  {
+    path: '/history',
+    name: 'history',
+    meta: {layout: 'main'},
+    component: () => import('../views/History')
+  },
+  {
+    path: '/detail-record',
+    name: 'datail-record',
+    meta: {layout: 'main'},
+    component: () => import('../views/DetailRecord')
   },
 ];
 
