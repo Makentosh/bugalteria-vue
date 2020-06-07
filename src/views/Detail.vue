@@ -26,7 +26,7 @@
 
 <script>
   export default {
-    name: "DetailRecord"
+    name: "Detail"
   }
 </script>
 
