@@ -19,7 +19,7 @@ export default {
         const info = (await firebase.database().ref(`/users/${uid}/info`).once('value')).val()
         commit('setInfo', info)
       } catch (e) {
-        commit.setError(e)
+        console.log(e)
       }
 
     }

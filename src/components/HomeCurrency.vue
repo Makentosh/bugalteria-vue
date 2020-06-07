@@ -18,7 +18,7 @@
           <tr v-for="cur in currencies"
               :key="cur">
             <td>{{ cur }}</td>
-            <td>{{ rates[cur] }}</td>
+            <td>{{ rates[cur].toFixed(2) }}</td>
             <td>{{ date | date('date') }}</td>
           </tr>
           </tbody>
