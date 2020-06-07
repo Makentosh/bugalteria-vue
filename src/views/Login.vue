@@ -11,7 +11,7 @@
         >
         <label for="email">Email</label>
         <small class="helper-text invalid"
-          v-if="$v.email.$dirty && !$v.email.required">
+               v-if="$v.email.$dirty && !$v.email.required">
           Поле Email не должно бить пустим
         </small>
         <small class="helper-text invalid"
@@ -28,7 +28,7 @@
         >
         <label for="password">Пароль</label>
         <small class="helper-text invalid"
-          v-if="$v.password.$dirty && !$v.password.required">
+               v-if="$v.password.$dirty && !$v.password.required">
           Введите пароль
         </small>
         <small class="helper-text invalid"
@@ -84,7 +84,7 @@
     },
 
     methods: {
-      submitHandler() {
+      async submitHandler() {
         if (this.$v.$invalid) {
           this.$v.$touch();
           return
@@ -97,7 +97,15 @@
 
         console.log(formdata);
 
-        this.$router.push('/')
+
+        try {
+          await this.$store.dispatch('login', formdata);
+
+          this.$router.push('/');
+        } catch (e) {
+          console.log(e)
+        }
+
       }
     }
   }
