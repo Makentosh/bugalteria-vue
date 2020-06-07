@@ -4,7 +4,9 @@ import Vuelidate from 'vuelidate'
 import router from './router'
 import store from './store'
 import dateFilter from './components/filters/date';
+import currencyFilter from './components/filters/currency.filter';
 import messagePlugin from '../src/utils/message.plugin';
+import Loader from '../src/components/app/Loader';
 import 'materialize-css/dist/js/materialize.min';
 import './registerServiceWorker'
 
@@ -14,10 +16,13 @@ import 'firebase/auth'
 import 'firebase/database'
 
 
+
 Vue.config.productionTip = false;
 Vue.filter('date', dateFilter);
+Vue.filter('currency', currencyFilter);
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
+Vue.component('Loader', Loader);
 
 
 const firebaseConfig = {
