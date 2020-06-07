@@ -98,7 +98,7 @@
     },
 
     methods: {
-      registerHandler() {
+      async registerHandler() {
         if (this.$v.$invalid) {
           this.$v.$touch();
           return
@@ -108,12 +108,17 @@
           email: this.email,
           password: this.password,
           name: this.name,
-          agreement: this.agreement
         };
 
-        console.log(formdata);
+        try {
+          await this.$store.dispatch('register', formdata);
 
-        this.$router.push('/')
+          this.$router.push('/')
+        } catch (e) {
+          console.log(e)
+        }
+
+
       }
     }
   }
