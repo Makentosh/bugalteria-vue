@@ -95,8 +95,6 @@
           password: this.password
         };
 
-        console.log(formdata);
-
 
         try {
           await this.$store.dispatch('login', formdata);
