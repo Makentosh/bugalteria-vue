@@ -77,7 +77,11 @@
 
         try {
           const category = await this.$store.dispatch('createCategory', data);
-          console.log(category)
+          this.limit = 100;
+          this.title = '';
+          this.$v.$reset();
+          this.$message('Категория била создана');
+          this.$emit('created', category)
         } catch (e) {
           console.log(e)
         }
