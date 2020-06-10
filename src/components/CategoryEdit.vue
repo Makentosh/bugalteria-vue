@@ -105,7 +105,6 @@
           console.log(e)
         }
 
-
       }
     },
     mounted() {
