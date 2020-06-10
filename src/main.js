@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import dateFilter from './components/filters/date';
 import currencyFilter from './components/filters/currency.filter';
+import tooltipDirective from './directives/tolltip.directive';
 import messagePlugin from '../src/utils/message.plugin';
 import Loader from '../src/components/app/Loader';
 import 'materialize-css/dist/js/materialize.min';
@@ -23,6 +24,7 @@ Vue.filter('currency', currencyFilter);
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
 Vue.component('Loader', Loader);
+Vue.directive('tooltip', tooltipDirective);
 
 
 const firebaseConfig = {
