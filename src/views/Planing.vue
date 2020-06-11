@@ -31,7 +31,7 @@
 
 <script>
   import {mapGetters} from 'vuex';
-  import currencyFilter from '../components/filters/currency.filter';
+  import currencyFilter from '../filters/currency.filter';
 
   export default {
     name: "Planing",

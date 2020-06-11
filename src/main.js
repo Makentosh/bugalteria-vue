@@ -3,8 +3,9 @@ import App from './App.vue'
 import Vuelidate from 'vuelidate'
 import router from './router'
 import store from './store'
-import dateFilter from './components/filters/date';
-import currencyFilter from './components/filters/currency.filter';
+import dateFilter from './filters/date';
+import currencyFilter from './filters/currency.filter';
+import localizeFilter from './filters/localize.filter';
 import tooltipDirective from './directives/tolltip.directive';
 import messagePlugin from '../src/utils/message.plugin';
 import Loader from '../src/components/app/Loader';
@@ -22,6 +23,7 @@ import Paginate from 'vuejs-paginate'
 Vue.config.productionTip = false;
 Vue.filter('date', dateFilter);
 Vue.filter('currency', currencyFilter);
+Vue.filter('localize', localizeFilter);
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
 Vue.component('Loader', Loader);
