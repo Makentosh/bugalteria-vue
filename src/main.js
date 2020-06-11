@@ -19,6 +19,7 @@ import 'firebase/database'
 import Paginate from 'vuejs-paginate'
 
 
+Vue.config.productionTip = false;
 
 Vue.config.productionTip = false;
 Vue.filter('date', dateFilter);

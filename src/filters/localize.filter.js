@@ -1,12 +1,11 @@
 import store from '../store'
+import ru from '../locales/ru'
+import en from '../locales/en'
+
 
 const locales = {
-  'ru-RU': {
-    ProfileTitle: 'Профиль'
-  },
-  'en-US': {
-    ProfileTitle: 'Profile'
-  }
+  'ru-RU': ru,
+  'en-US': en
 };
 
 export default function localizeFilter(key) {
