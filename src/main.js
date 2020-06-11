@@ -15,6 +15,7 @@ import firebase from 'firebase/app'
 
 import 'firebase/auth'
 import 'firebase/database'
+import Paginate from 'vuejs-paginate'
 
 
 
@@ -25,6 +26,7 @@ Vue.use(Vuelidate);
 Vue.use(messagePlugin);
 Vue.component('Loader', Loader);
 Vue.directive('tooltip', tooltipDirective);
+Vue.component('Paginate', Paginate);
 
 
 const firebaseConfig = {
