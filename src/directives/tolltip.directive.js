@@ -1,7 +1,10 @@
 export default {
   bind(el, {value}) {
     // eslint-disable-next-line no-undef
-    M.Tooltip.init(el, {html: value})
+    M.Tooltip.init(el, {
+      html: value,
+      position: 'top'
+    })
   },
   unbind(el) {
     // eslint-disable-next-line no-undef
