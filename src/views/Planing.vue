@@ -2,7 +2,7 @@
   <div>
     <div class="page-title">
       <h3>Планирование</h3>
-      <h4>{{ info.bill | currency('num')}}</h4>
+      <h4>{{ info.bill | currency}}</h4>
     </div>
     <Loader v-if="loading"/>
 
