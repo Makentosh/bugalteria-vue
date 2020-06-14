@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>История записей</h3>
+      <h3>{{ 'History' | localize}}</h3>
     </div>
 
     <div class="history-chart">
@@ -12,9 +12,9 @@
 
     <p class="center"
        v-else-if="!records.length">
-      Записей пока нет.
+      {{ 'No posts yet.' | localize}}
       <router-link to="/record">
-        Добавьте первую
+        {{ 'Add first'  | localize}}
       </router-link>
     </p>
 
@@ -24,8 +24,8 @@
       <Paginate :page-count="pageCount"
                 v-model="page"
                 :click-handler="pageChangeHanlder"
-                :prev-text="'Назад'"
-                :next-text="'Вперед'"
+                :prev-text="'Back' | localize"
+                :next-text="'Next' | localize"
                 :page-class="'waves-effect'"
                 :container-class="'pagination'"/>
     </section>

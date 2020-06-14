@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>Планирование</h3>
+      <h3>{{ 'Planing' | localize }}</h3>
       <h4>{{ info.bill | currency}}</h4>
     </div>
     <Loader v-if="loading"/>
 
     <p v-else-if="categories.length === 0"
        class="center">
-      Категорий пока нет. <router-link to="/categories">Добавить категорию</router-link>
+      {{'There are no categories yet.' | localize}} <router-link to="/categories">{{ 'Add category' | localize}}</router-link>
     </p>
 
     <section v-else>
@@ -50,8 +50,7 @@
 
       this.categories = categories.map(cat => {
         const spend = records
-              .filter(r => r.categoryId === cat.id)
-              .filter(r => r.type === 'outcome')
+              .filter(r => r.categoryId === cat.id && r.type === 'outcome')
               .reduce((total, record) => {
                 return total += +record.amount
               }, 0);
@@ -75,6 +74,7 @@
           tooltip
         }
       });
+
       this.loading = false;
     },
   }
