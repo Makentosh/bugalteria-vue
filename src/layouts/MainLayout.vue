@@ -13,7 +13,7 @@
       </main>
 
       <div class="fixed-action-btn">
-        <router-link class="btn-floating btn-large blue" to="/record" v-tooltip="'Create new post' | localize">
+        <router-link class="btn-floating btn-large blue" to="/record" v-tooltip.noloc="'Create new post'">
           <i class="large material-icons">add</i>
         </router-link>
       </div>
