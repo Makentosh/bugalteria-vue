@@ -43,6 +43,11 @@
     mixins: [paginationMixin],
     extends: Pie,
     components: {HistoryTable},
+    metaInfo() {
+      return {
+        title: this.$title('History')
+      }
+    },
     data() {
       return {
         loading: true,

@@ -4,10 +4,9 @@
 
     <div v-else-if="record">
       <div class="breadcrumb-wrap">
-        <router-link to="/history" class="breadcrumb">История</router-link>
+        <router-link to="/history" class="breadcrumb">{{ 'History' | localize}}</router-link>
         <a @click.prevent class="breadcrumb">
-          {{ record.type === 'income' ? 'Доход' : 'Расход' }}
-          Расход
+          {{ record.type === 'income' ? 'Income' : 'Outcome'  | localize }}
         </a>
       </div>
 
@@ -17,9 +16,9 @@
                 :class="{'red': record.type === 'outcome',
                           'green': record.type === 'income'}">
             <div class="card-content white-text">
-              <p>Описание: {{ record.description }}</p>
-              <p>Сумма: {{ record.amount | currency }}</p>
-              <p>Категория: {{ record.categoryName }}</p>
+              <p>{{'Description' | localize }}: {{ record.description }}</p>
+              <p>{{ 'Sum' | localize }}: {{ record.amount | currency }}</p>
+              <p>{{'Category' | localize }}: {{ record.categoryName }}</p>
 
               <small>{{ record.data | date('datetime')}}</small>
             </div>
@@ -29,7 +28,7 @@
     </div>
 
     <p class="center" v-else>
-      Запись с id=<strong>{{ $route.params.id }}</strong> не найдена.
+      {{'Recording with' | localize }} id=<strong>{{ $route.params.id }}</strong> {{'not found.' | localize}}
     </p>
   </div>
 </template>
@@ -37,6 +36,11 @@
 <script>
   export default {
     name: "Detail",
+    metaInfo() {
+      return {
+        title: this.$title('Detail')
+      }
+    },
     data() {
       return {
         loading: true,

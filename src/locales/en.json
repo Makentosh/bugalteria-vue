@@ -1,4 +1,7 @@
 {
+  "Register": "Register",
+  "Login": "Login",
+  "Home": "Home",
   "Logout": "Logout",
   "ProfileTitle": "Profile",
   "Name": "Name",
@@ -36,5 +39,7 @@
   "Currency Account": "Currency Account",
   "Exchange rate": "Exchange rate",
   "Course": "Course",
-  "Currency": "Currency"
+  "Currency": "Currency",
+  "Recording with": "Recording with",
+  "not found.": "not found."
 }

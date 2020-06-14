@@ -1,4 +1,7 @@
 {
+  "Register": "Регистрация",
+  "Login": "Войти",
+  "Home": "Домашняя",
   "Logout": "Выйти",
   "ProfileTitle": "Профиль",
   "Name": "Имя",
@@ -36,5 +39,7 @@
   "Currency Account": "Счет в валюте",
   "Exchange rate": "Курс валют",
   "Course": "Курс",
-  "Currency": "Валюта"
+  "Currency": "Валюта",
+  "Recording with": "Запись с",
+  "not found.": "не найдена."
 }

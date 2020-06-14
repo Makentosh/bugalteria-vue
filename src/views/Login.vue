@@ -69,6 +69,12 @@
       password: {required, minLength: minLength(6)}
     },
 
+    metaInfo() {
+      return {
+        title: this.$title('Login')
+      }
+    },
+
     data() {
       return {
         email: '',

@@ -42,6 +42,11 @@
 
 
   export default {
+    metaInfo() {
+      return {
+        title: this.$title('ProfileTitle')
+      }
+    },
     name: "Profile",
     validations: {
       name: { required }

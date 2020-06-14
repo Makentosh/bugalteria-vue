@@ -97,6 +97,11 @@
       amount: { minValue: minValue(1) },
       description: { required }
     },
+    metaInfo() {
+      return {
+        title: this.$title('Record')
+      }
+    },
     data() {
       return {
         categories: [],

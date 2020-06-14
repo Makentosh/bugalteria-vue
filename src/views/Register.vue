@@ -88,6 +88,12 @@
       agreement: {checked: v => v}
     },
 
+    metaInfo() {
+      return {
+        title: this.$title('Register')
+      }
+    },
+
     data() {
       return {
         email: '',
