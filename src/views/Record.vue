@@ -9,7 +9,7 @@
     <p v-else-if="categories.length === 0"
        class="center">
       {{ 'There are no categories yet.' | localize }}
-      <router-link to="/categories"></router-link>{{'Add category' | localize}}
+      <router-link to="/categories">{{'Add category' | localize}}</router-link>
     </p>
 
     <form v-else class="form" @submit.prevent="submitHandler">

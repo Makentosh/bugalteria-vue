@@ -11,10 +11,12 @@
     <Loader v-if="loading"/>
 
     <div v-else class="row">
-      <HomeBill :rates="currency.rates"/>
+      <HomeBill :rates="currency"/>
+<!--      <HomeBill :rates="currency.rates"/>-->
 
-      <HomeCurrency :rates="currency.rates"
-                    :date="currency.date"/>
+<!--      <HomeCurrency :rates="currency.rates"-->
+<!--                    :date="currency.date"/>-->
+      <HomeCurrency :rates="currency"/>
     </div>
   </div>
 </template>
@@ -48,7 +50,6 @@
         this.loading = true;
         this.currency = await this.$store.dispatch('fetchCurrency');
         this.loading = false;
-
 
       }
     }
